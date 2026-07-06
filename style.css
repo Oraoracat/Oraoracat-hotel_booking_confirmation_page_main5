@@ -1,0 +1,25 @@
+
+
+
+@font-face 
+{
+    font-family: dm-mono;
+    src: url(./assets/fonts/dm-mono/DMMono-Medium.ttf);
+}
+@font-face 
+{
+    font-family: dm-sans;
+    src: url(./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
+@font-face 
+{
+    font-family: fraunces;
+    src: url(./assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+.sidebar
+{
+    padding: 10px;
+    width: 15%;
+
+}
