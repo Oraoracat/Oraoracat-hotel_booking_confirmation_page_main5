@@ -1,10 +1,7 @@
-
-
-
 @font-face 
 {
     font-family: dm-mono;
-    src: url(./assets/fonts/dm-mono/DMMono-Medium.ttf);
+    src: url(./assets/fonts/dm-mono/DMMono-Regular.ttf);
 }
 @font-face 
 {
@@ -14,12 +11,198 @@
 @font-face 
 {
     font-family: fraunces;
+    src: url(./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face 
+{
+    font-family: fraunces-italic;
     src: url(./assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
+:root
+{
+--Neutral900: hsl(33, 15%, 15%);
+--Neutral800: hsl(33, 22%, 20%);
+--Neutral700: hsl(32, 20%, 29%);
+--Neutral600: hsl(33, 17%, 41%);
+--Neutral400: hsl(36, 22%, 86%);
+--Neutral200: hsl(30, 24%, 93%);
+--Neutral100: hsl(35, 60%, 96%);
+--Neutral50: hsl(40, 60%, 98%);
+--Neutral0: hsl(0, 0%, 100%);
+
+
+--Sun500: hsl(42, 83%, 58%);
+--Sun300: hsl(44, 84%, 75%);
+--Sun200: hsl(45, 100%, 74%);
+--Sun50: hsl(41, 100%, 93%);
+
+--Terracotta700: hsl(15, 69%, 37%);
+--Terracotta600: hsl(15, 74%, 41%);
+--Terracotta500: hsl(18, 62%, 47%);
+--Terracotta400: hsl(22, 72%, 56%);
+
+--Blue500: hsl(230, 49%, 56%);
+
+--Rose500: hsl(340, 48%, 52%);
+}
+
+body
+{
+    background-color: var(--Neutral200);
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+                                    /*SIDE BAR MENU*/
 .sidebar
 {
     padding: 10px;
-    width: 15%;
+    
+    width: 250px;
+    height: 95vh;   
+
+    border: 1px solid red;
+    color: var(--Neutral900);
+
+    display: grid;
+    align-content: space-between;
 
 }
+.sidebar button
+{
+    width: 100%;
+    margin: 10px 5px;
+    text-align: left;
+    padding: 5px 10px;
+    font-family: dm-sans;
+
+    display: flex;
+    align-content: center;
+    
+    background-color: transparent;
+    border-color: red;
+}
+.sidebar span
+{
+    padding-left: 10px;
+}
+.weather-block
+{
+    background-color: var(--Sun300);
+    border-radius: 15px;
+
+    padding: 10px;
+
+    font-family: dm-mono;
+
+    background-image: url(./assets/images/icon-weather.svg);
+    background-repeat: no-repeat;
+    background-position-y: -70%;
+    background-position-x: 105%;
+
+
+}
+.weather-block span:first-child
+{
+    text-transform:uppercase;
+    font-size: small;
+    color: var(--Neutral700);
+}
+.temp
+{
+    font-size: 40px;
+    font-family: fraunces;
+    display: block;
+}
+.weather-block span:last-child
+{
+    font-size: small;
+    color: var(--Neutral700);
+}
+.footer p
+{
+    font-family: dm-mono;
+
+    text-transform:uppercase;
+    font-size: small;
+    color: var(--Neutral700);
+}
+#hr-dashed
+{
+    border: 1px dashed var(--Neutral400);
+}
+
+
+
+
+
+
+
+                                    /*MAIN WINDOW*/
+.main-window
+{
+    margin: 10px 50px;
+    flex-grow: 1;
+}
+.main-window p
+{
+    text-transform:uppercase;
+    font-family: dm-mono;  
+    font-size: small;
+    color: var(--Neutral700);
+    letter-spacing: 1.2px;
+}
+.greetings
+{
+    font-family: fraunces;  
+    font-size: small;
+    color: var(--Neutral900);
+
+    font-size: 44px;
+}
+.username
+{
+    font-family: fraunces-italic;  
+    font-size: small;
+    color: var(--Terracotta500);
+
+    font-size: 44px;
+}
+.main-window header
+{
+    display: flex;
+    justify-content:space-between;
+}
+.print-receipt
+{
+    background-color: transparent;
+    color: var(--Neutral900);
+    font-family: dm-sans;
+    text-align: center;
+    letter-spacing: 1.1px;
+
+
+    border: 1px solid var(--Neutral400);
+    border-radius: 100px;
+
+    padding: 10px;
+    margin: 0px 10px;
+}
+.add-to-calendar
+{
+    background-color: var(--Neutral900);
+    color: var(--Neutral200);
+    font-family: dm-sans;
+    text-align: center;
+    letter-spacing: 1.1px;
+
+    border: 1px solid var(--Neutral900);
+    border-radius: 100px;
+
+    padding: 10px;
+
+}
+
+
