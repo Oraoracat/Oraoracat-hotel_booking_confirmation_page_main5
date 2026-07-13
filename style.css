@@ -110,7 +110,7 @@ body
     font-size: small;
     color: var(--Neutral700);
 }
-.temp
+.title
 {
     font-size: 40px;
     font-family: fraunces;
@@ -204,5 +204,17 @@ body
     padding: 10px;
 
 }
+.grey_text
+{
+    font-family: dm-mono;
 
+    text-transform:uppercase;
+    font-size: small;
+    color: var(--Neutral700);
+}
+.booking_cards
+{
+    background-color: var(--Neutral0);
+    border-radius: 20px;
+}
 
