@@ -112,9 +112,15 @@ body
 }
 .title
 {
-    font-size: 40px;
+        font-size: 40px;
     font-family: fraunces;
     display: block;
+}
+.subtitle
+{
+        font-size: 30px;
+    font-family: fraunces;
+    display: block;  
 }
 .weather-block span:last-child
 {
@@ -214,7 +220,35 @@ body
 }
 .booking_cards
 {
+    margin: 100px 100px;
     background-color: var(--Neutral0);
     border-radius: 20px;
+    width: 40%;
+    height: auto;
+    padding: 30px;
 }
+.receipt_card table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.receipt_card td:nth-child(2)
+{
+    text-align: right;
+}
+.check-in-out
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 
+    padding: 20px 0px;
+}
+.bill td
+{
+    padding: 10px 0px;
+}
+.bill table
+{
+    font-family: dm-mono;
+}
