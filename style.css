@@ -58,9 +58,7 @@ body
                                     /*SIDE BAR MENU*/
 .sidebar
 {
-    padding: 10px;
-    
-    width: 250px;   
+    padding: 10px;   
 
     border-right: 1px solid var(--Neutral400);
     color: var(--Neutral900);
@@ -232,6 +230,11 @@ body
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    background-image: url(./assets/images/illustration-sun.svg);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
 }
 .grey_text
 {
@@ -250,6 +253,8 @@ body
 .receipt_card
 {
     margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: -5px;
     background-color: var(--Neutral0);
     border-radius: 20px;
     width: 35%;
@@ -290,6 +295,8 @@ body
 .host_card
 {
     margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: -5px;
     background-color: var(--Terracotta700);
     border-radius: 20px;
     width: 35%;
@@ -493,10 +500,31 @@ body
 }
 
                                                 /* ANIMATION */
+.booking_cards:hover .receipt_card
+{
+  position: relative;
+  animation-name: NaLewo;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.booking_cards:hover .host_card
+{
+  position: relative;
+  animation-name: NaPrawo;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 
 
+@keyframes NaLewo {
+  0%   {right:0px;}
+  100%  {right:100px; transform: rotate(5deg);}
+}
 
-
+@keyframes NaPrawo {
+  0%   {left:0px;}
+  100%  {left:100px;transform: rotate(-5deg);}
+}
 
 
 
