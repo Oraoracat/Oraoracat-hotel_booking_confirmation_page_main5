@@ -16,12 +16,12 @@
   <section class="sidebar">
     <section class="sidebar-1">
       <img src="./assets/images/logo.svg" alt="logo">
-      <hr>
-      <button><img src="./assets/images/icon-bed.svg" alt=""><span>Your stay</span></button>
-      <button><img src="./assets/images/icon-house.svg" alt=""><span>The house</span></button>
-      <button><img src="./assets/images/icon-pin.svg" alt=""><span>Around town</span></button>
-      <button><img src="./assets/images/icon-breakfast-outline.svg" alt=""><span>Breakfast</span></button>
-      <button><img src="./assets/images/icon-mail.svg" alt=""><span>Messages</span></button>
+      <hr class="hr-solid">
+      <button class="option-btn active"><img src="./assets/images/icon-bed.svg" alt=""><span>Your stay</span></button>
+      <button class="option-btn"><img src="./assets/images/icon-house.svg" alt=""><span>The house</span></button>
+      <button class="option-btn"><img src="./assets/images/icon-pin.svg" alt=""><span>Around town</span></button>
+      <button class="option-btn"><img src="./assets/images/icon-breakfast-outline.svg" alt=""><span>Breakfast</span></button>
+      <button class="option-btn"><img src="./assets/images/icon-mail.svg" alt=""><span>Messages</span></button>
     </section>
     <section class="sidebar-2">
       <div class="weather-block">
@@ -71,13 +71,13 @@
           <div>
             <span class="grey_text">Check in</span>
             <span class="title">25 Apr</span>
-            <span class="grey_text">Saturday · 15:00</span>
+            <span class="normal_text">Saturday · 15:00</span>
           </div>
 
           <div>
             <span class="grey_text">Check out</span>
             <span class="title">29 Apr</span>
-            <span class="grey_text">Wednesday · 11:00</span>
+            <span class="normal_text">Wednesday · 11:00</span>
           </div>
         </section>
       <hr id="hr-dashed">
@@ -132,12 +132,101 @@
         </footer>
       </article>
     </section>
+  
+    <section class="break">
+      <img src="./assets/images/icon-sparkle.svg" alt="">
+      <span>hover to fan</span>
+      <img src="./assets/images/icon-sparkle.svg" alt="">
+    </section>
+
+    <section class="info-boxes">
+      <article class="box_1">
+        <header>
+          <div>
+            <div class="box_1_image">
+              <img src="./assets/images/icon-key.svg" alt="" >
+            </div>
+            <p>Arrival</p>
+          </div>    
+          <span>01</span>
+        </header>
+
+        <section class="main">
+          <span class="small_subtitle">Check-in from 15:00</span>
+          <span class="grey_text2">Sat, 25 April</span>
+          <span class="small_normal_text">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</span>
+        </section>
+      </article>
+
+      <article class="box_2">
+        <header>
+          <div>
+            <div class="box_2_image">
+              <img src="./assets/images/icon-wifi.svg" alt="" >
+            </div>
+            <p>Wifi</p>
+          </div>    
+          <span>02</span>
+        </header>
+
+        <section class="main">
+          <span class="small_subtitle">Le Soleil · Guest</span>
+          <span class="grey_text2">Password below</span>
+          <table>
+            <tr>
+              <td class="grey_text">Network</td>
+              <td class="small_normal_text">Le Soleil · Guest</td>
+            </tr>
+            <tr>
+              <td class="grey_text">Password</td>
+              <td class="small_normal_text">soleil-2026 <button>Copy</button></td>
+            </tr>
+          </table>
+
+        </section>
+      </article>
+
+      <article class="box_3">
+        <header>
+          <div>
+            <div class="box_3_image">
+              <img src="./assets/images/icon-breakfast.svg" alt="" >
+            </div>
+            <p>Breakfast</p>
+          </div>    
+          <span>03</span>
+        </header>
+
+        <section class="main">
+          <span class="small_subtitle">Served 8 - 10:30</span>
+          <span class="grey_text2">On the terrace</span>
+          <span class="small_normal_text">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</span>
+        </section>
+      </article>
+    </section>
 
 
+    <script>
+      // I had to help myself with AI here, because I dont remember JS
+      const buttons = document.querySelectorAll('.option-btn');
+
+      // 2. Dodajemy zdarzenie kliknięcia do każdego z nich
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          
+          // 3. Usuwamy klasę 'active' ze wszystkich przycisków w grupie
+          buttons.forEach(btn => btn.classList.remove('active'));
+          
+          // 4. Dodajemy klasę 'active' do klikniętego przycisku
+          this.classList.add('active');
+          
+        });
+      });
+    </script>
   </section>
 
-
-
-  
 </body>
+
+
+
 </html>
