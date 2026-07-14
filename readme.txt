@@ -29,7 +29,46 @@ obrazka była niewidzialna)
                     justify-content:space-between;
 8.Jak dać bloku możliwość wykorzystania całej reszty miejsca które zostało na stronie?
                     flex-grow: 0;
-9.
+9.Jak zrobić cień? 
+                    box-shadow: h-offset v-offset blur spread color;
+
+                    box-shadow: -5px 10px 10px var(--Neutral400);
+10.Jak zrobić Animacje? 
+                    .booking_cards:hover .receipt_card
+                    {
+                    position: relative;
+                    animation-name: NaLewo;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                    }
+
+                    @keyframes NaLewo {
+                    0%   {right:0px;}
+                    100%  {right:100px; transform: rotate(5deg);}
+                    }
+Szczerze niektóre nazwy już kojarzę ale 33% wciąż stanowi zagadkę.
+11. Miałem problem z przyciskami i tutaj wykorzystałem AI Gemini za co mi trochę wstyd. Nie wiedziałem jak po zaznaczeniu przycisk miałby się podświetlać.
+                        <script>
+                        // I had to help myself with AI here, because I dont remember JS
+                        const buttons = document.querySelectorAll('.option-btn');
+
+                        // 2. Dodajemy zdarzenie kliknięcia do każdego z nich
+                        buttons.forEach(button => {
+                            button.addEventListener('click', function() {
+                            
+                            // 3. Usuwamy klasę 'active' ze wszystkich przycisków w grupie
+                            buttons.forEach(btn => btn.classList.remove('active'));
+                            
+                            // 4. Dodajemy klasę 'active' do klikniętego przycisku
+                            this.classList.add('active');
+                            
+                            });
+                        });
+                        </script>
+Na marginesie każdy z przycisków jest w klasie .option-btn lub .option-btn active.
+
+
+
 
 
 
