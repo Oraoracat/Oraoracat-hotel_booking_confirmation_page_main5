@@ -210,6 +210,16 @@ body
     padding: 10px;
 
 }
+
+
+
+
+.booking_cards
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .grey_text
 {
     font-family: dm-mono;
@@ -218,14 +228,17 @@ body
     font-size: small;
     color: var(--Neutral700);
 }
-.booking_cards
+.receipt_card
 {
-    margin: 100px 100px;
+    margin-top: 100px;
     background-color: var(--Neutral0);
     border-radius: 20px;
-    width: 40%;
-    height: auto;
+    width: 35%;
+    height: 100%;
     padding: 30px;
+
+    transform: rotate(-5deg);
+    box-shadow: -5px 10px 10px var(--Neutral400);
 }
 .receipt_card table
 {
@@ -246,9 +259,64 @@ body
 }
 .bill td
 {
-    padding: 10px 0px;
+    padding: 3px 0px;
 }
 .bill table
 {
     font-family: dm-mono;
+}
+
+
+.host_card
+{
+    margin-top: 100px;
+    background-color: var(--Terracotta700);
+    border-radius: 20px;
+    width: 35%;
+    padding: 30px;
+    height: 100%;
+    transform: rotate(5deg);
+
+    color: var(--Neutral200);
+    box-shadow: 0px 10px 20px var(--Terracotta400);
+}
+.host_card header
+{   
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.host_card p
+{
+    color: var(--Neutral200);
+}
+.note
+{
+    color: var(--Sun200);
+    font-family: fraunces-italic;
+    font-size: 24px;
+        padding: 10px 0px;
+}
+.name
+{
+    font-size: 40px;
+    font-family: fraunces-italic;
+        padding-bottom: 10px;
+
+}
+.description
+{
+    font-family: dm-sans;
+        padding: 30px 0px;
+}
+.host_card article
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+.host_card footer span
+{
+    font-size: 24px;
 }
